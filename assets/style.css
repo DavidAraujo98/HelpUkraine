@@ -1,0 +1,44 @@
+body {
+  color: #666666;
+}
+
+nav {
+  background-color: #0057b7;
+}
+
+.navbar-light .navbar-brand {
+  text-transform: uppercase;
+  color: #ffd700 !important;
+  font-weight: bold;
+}
+
+.site-description h2 {
+  font-weight: bold;
+  color: #0057b7;
+}
+
+.btn {
+  color: #0057b7;
+  background-color: #ffd700;
+  outline-style: solid;
+  outline-color: #ffd700;
+  margin: 2%;
+}
+
+.btn:hover {
+  color: #ffd700;
+  background-color: #0057b7;
+}
+
+main {
+  margin: 5%;
+}
+
+.card {
+  margin-top: 5%;
+}
+
+.card-title {
+  color: #0057b7;
+}
+/*# sourceMappingURL=style.css.map */

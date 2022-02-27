@@ -1,0 +1,47 @@
+$blue : #0057b7;
+$yellow: #ffd700;
+$dark-grey: #666666;
+
+body{
+    color: $dark-grey;
+}
+
+nav {
+    background-color: #0057b7;
+}
+
+.navbar-light .navbar-brand{
+    text-transform: uppercase;
+    color: $yellow !important;
+    font-weight: bold;
+} 
+
+.site-description h2{
+    font-weight: bold;
+    color: $blue
+}
+
+.btn {
+    color: $blue;
+    background-color: $yellow;
+    outline-style: solid;
+    outline-color: $yellow;
+    margin: 2%;
+}
+
+.btn:hover{
+    color: $yellow;
+    background-color: $blue;
+}
+
+main {
+    margin: 5%;
+}
+
+.card {
+    margin-top: 5%;
+}
+
+.card-title {
+    color: $blue;
+}
