@@ -10,27 +10,37 @@ nav {
     background-color: #0057b7;
 }
 
-.navbar-light .navbar-brand{
+.navbar-light .navbar-brand .navbar-title {
     text-transform: uppercase;
     color: $yellow !important;
     font-weight: bold;
+    text-decoration: none;
 } 
 
-.site-description h2{
+#welcome h2{
     font-weight: bold;
     color: $blue
 }
 
+.nav-link {
+    color: white!important;
+}
+
+.nav-link:hover {
+    color: $yellow!important;
+}
+
 .btn {
-    color: $blue;
+    color: $blue!important;
     background-color: $yellow;
     outline-style: solid;
     outline-color: $yellow;
     margin: 2%;
+    align-items: center;
 }
 
 .btn:hover{
-    color: $yellow;
+    color: white!important;
     background-color: $blue;
 }
 
