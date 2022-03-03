@@ -64,34 +64,43 @@
       </div>
     </nav>
     <main>
-        <h3>Thank you !</h3>
-        <h5>Without you'r submissions we wouldn't be able to grow the database has big and has fast has we can. You're support is paramount and we hope you can continue to provide it ! :)</h5>
-        <br>
-        <form>
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="name">Organization's Name</label>
-                <input type="text" id="name" class="form-control" />
-            </div>
+      <h3 class="m-auto">Thank you !</h3>
+      <h5 class="m-auto">
+        Without you'r submissions we wouldn't be able to grow the database has
+        big and has fast has we can. You're support is paramount and we hope you
+        can continue to provide it ! :)
+      </h5>
+      <br />
+      <form class="m-auto" id="submission">
+        <!-- Name input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="name">Organization's Name</label>
+          <input type="text" id="name" class="form-control" />
+        </div>
 
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="url">URL</label>
-                <input type="url" id="url" class="form-control" />
-            </div>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="url">URL</label>
+          <input type="url" id="url" class="form-control" />
+        </div>
 
-            <!-- Message input -->
-            <div class="form-outline mb-4">
-                <label class="form-label" for="desc">Short Description</label>
-                <textarea class="form-control" id="desc" rows="2"></textarea>
-            </div>
+        <!-- Message input -->
+        <div class="form-outline mb-4">
+          <label class="form-label" for="desc">Short Description</label>
+          <textarea class="form-control" id="desc" rows="4"></textarea>
+        </div>
 
-            <div class="form-outline mb-4">
-                <!-- Submit button -->
-                <button type="submit" class="btn justify-content-center" onclick="sendData()">Send</button>
-            </div>
-            
-        </form>
+        <div class="form-outline mb-4">
+          <!-- Submit button -->
+          <button
+            type="submit"
+            class="btn justify-content-center"
+            onclick="sendData()"
+          >
+            Send
+          </button>
+        </div>
+      </form>
     </main>
   </body>
 </html>

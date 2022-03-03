@@ -61,6 +61,8 @@ main h5 {
 }
 
 main {
+    align-items: center;
+    justify-content: center;
     margin: 5%;
 }
 
@@ -74,4 +76,9 @@ main {
 
 .form-label {
     color: $blue;
+}
+
+form#submission {
+    margin-inline: 5%;
+    max-width: 600px;
 }
