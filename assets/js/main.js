@@ -1,6 +1,7 @@
 function welcome() {
     loadSection("A");
-    if (!document.referrer.includes("helpukraine.pt")) {
+    if (document.cookie != "true") {
+        document.cookie = "true";
         var myModal = new bootstrap.Modal(document.getElementById('welcome'), {
             keyboard: false
         });
