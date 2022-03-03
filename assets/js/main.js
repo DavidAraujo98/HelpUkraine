@@ -12,7 +12,9 @@ function welcome() {
 
 
 function loadSection() {
-    url = "https://docs.google.com/spreadsheets/d/1XYnKVNYbxarQPCxJTDxOBADRD0vV2v_rFpdU2TwGXyc/gviz/tq?sheet=" + window.location.hash.slice(1);
+
+    var letter = window.location.hash.slice(1);
+    url = "https://docs.google.com/spreadsheets/d/1XYnKVNYbxarQPCxJTDxOBADRD0vV2v_rFpdU2TwGXyc/gviz/tq?sheet=" + letter;
     
     var main = document.getElementById("main");
 
@@ -28,17 +30,40 @@ function loadSection() {
         .then(res => res.text())
         .then(rep => {
             const data = JSON.parse(rep.substring(47).slice(0, -2));
-            data.table.rows.forEach((heading, index) => {
-                if (index < 1) return;
-                var n = heading.c[0].v;
-                var u = heading.c[1].v;
-                var d = heading.c[2].v;
-                var l = heading.c[3].v;
-                console.log(heading.c[0].v);
-                _cardBuilder(child, n, u, d, l);
-            })
-        })
-    
+            rows = data.table.rows;
+
+            if (rows.length <= 1) {
+                _emptyPage(child, letter);
+            } else {
+                rows.forEach((heading, index) => {
+                    if (index < 1) {return;} 
+                    var n = heading.c[0].v;
+                    var u = heading.c[1].v;
+                    var d = heading.c[2].v;
+                    var l = heading.c[3].v;
+                    console.log(heading.c[0].v);
+                    _cardBuilder(child, n, u, d, l);
+                })   
+            }
+        }) 
+}
+
+function _emptyPage(child, letter) {
+    if (letter == "") letter = "A";
+
+    var div = document.createElement("div");
+    div.setAttribute("class", "m-auto text-md-center");
+    child.append(div);
+
+    var h5 = document.createElement("h5");
+    h5.setAttribute("class", "text-center");
+    h5.innerHTML = "Sorry, there are still no entries for the letter <b>" + letter + "</b>";
+    div.appendChild(h5);
+
+    var p = document.createElement("p");
+    p.setAttribute("class", "text-center");
+    p.innerHTML = "Help us out by visiting <a href='/pages/submission.html'>Submission</a>, and propose a organization's website !";
+    div.appendChild(p);
 }
 
 function _cardBuilder(sec, name, url, decp, logo) {

@@ -78,7 +78,11 @@ main {
     color: $blue;
 }
 
+main b {
+    color: #0057b7;
+}
+
 form#submission {
     margin-inline: 5%;
-    max-width: 600px;
+    max-width: 800px;
 }
