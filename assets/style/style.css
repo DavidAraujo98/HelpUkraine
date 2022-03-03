@@ -13,6 +13,19 @@ nav {
   text-decoration: none;
 }
 
+.navbar-logo {
+  max-width: 40vh;
+}
+
+main h3 {
+  color: #0057b7;
+}
+
+main h5 {
+  color: #0057b7;
+  opacity: 0.6;
+}
+
 #welcome h2 {
   font-weight: bold;
   color: #0057b7;
@@ -26,15 +39,18 @@ nav {
   color: #ffd700 !important;
 }
 
+.nav-link.btn {
+  margin: 2%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn {
   color: #0057b7 !important;
   background-color: #ffd700;
   outline-style: solid;
   outline-color: #ffd700;
-  margin: 2%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .btn:hover {
@@ -51,6 +67,10 @@ main {
 }
 
 .card-title {
+  color: #0057b7;
+}
+
+.form-label {
   color: #0057b7;
 }
 /*# sourceMappingURL=style.css.map */

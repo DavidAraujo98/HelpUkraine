@@ -17,6 +17,19 @@ nav {
     text-decoration: none;
 } 
 
+.navbar-logo {
+    max-width: 40vh;
+}
+
+main h3{
+    color: $blue;
+}
+
+main h5 {
+    color: $blue;
+    opacity: 0.6;
+}
+
 #welcome h2{
     font-weight: bold;
     color: $blue
@@ -30,13 +43,16 @@ nav {
     color: $yellow!important;
 }
 
+.nav-link.btn{
+    margin: 2%;
+    align-items: center;
+}
+
 .btn {
     color: $blue!important;
     background-color: $yellow;
     outline-style: solid;
-    outline-color: $yellow;
-    margin: 2%;
-    align-items: center;
+    outline-color: $yellow; 
 }
 
 .btn:hover{
@@ -53,5 +69,9 @@ main {
 }
 
 .card-title {
+    color: $blue;
+}
+
+.form-label {
     color: $blue;
 }

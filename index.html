@@ -1,179 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="\assets\style.css">
-    <script src="\assets\main.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="\assets\style\style.css" />
+    <script src="\assets\js\main.js"></script>
     <title>Help Ukraine</title>
-</head>
-<body onload="loadEntries()">
+  </head>
+  <body onload="welcome()" onhashchange="loadSection()">
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container-fluid row-sm-1">
-            <div class="navbar-brand">
-                <a href="\" class="navbar-title"><h1><b style="text-decoration: underline;">H</b>elp<b style="text-decoration: underline;">U</b>kraine</h1></a>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                    <li class="nav-item px-2 justify-content-end">
-                        <a class="nav-link btn" aria-current="page" href="#">Submission</a>
-                    </li>
-                    <li class="nav-item px-2 justify-content-end">
-                        <a class="nav-link btn" aria-current="page" href="mailto:help@helpukraine.pt">Contact</a>
-                    </li>
-                </ul> 
-            </div>
+      <div class="container-fluid row-sm-1">
+        <div class="navbar-brand">
+          <a href="\" class="navbar-title"
+            ><h1>
+              <b style="text-decoration: underline">H</b>elp<b
+                style="text-decoration: underline"
+                >U</b
+              >kraine
+            </h1></a
+          >
         </div>
-    </nav>
-    <!-- https://www.codeply.com/go/LFROz8QVsi -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top"> 
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav m-auto">
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#A">A</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#B">B</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#C">C</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#D">D</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#E">E</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#F">F</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#G">G</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#H">H</a>
-                </li>
-                <li class="nav-item px-2 col-md">
-                    <a class="nav-link" href="#I">I</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#J">J</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#K">K</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#L">L</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#M">M</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#N">N</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#O">O</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#P">P</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#Q">Q</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#R">R</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#S">S</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#T">T</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#U">U</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#V">V</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#W">W</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#X">X</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#Y">Y</a>
-                </li>
-                <li class="nav-item px-2">
-                    <a class="nav-link" href="#Z">Z</a>
-                </li>
-            </ul> 
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2 justify-content-end">
+              <a class="nav-link btn" aria-current="page" href="\pages\submission.html"
+                >Submission</a
+              >
+            </li>
+            <li class="nav-item px-2 justify-content-end">
+              <a
+                class="nav-link btn"
+                aria-current="page"
+                href="mailto:help@helpukraine.pt"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-    <main>
-        <section id="A">      
-            <div id="redcross.org.ua" class="card border-0 shadow">
-                <div class="row">
-                    <div class="col-md-2 align-items-center">
-                        <img src="assets\logos\ua_red_cross.png" class="card-img-top">
-                    </div>
-                    <div class="col">
-                        <div class="card-body ">
-                            <h2 id="title" class="card-title">(Ukranian) Red Cross</h2>
-                            <p id="description" class="card-text">Make a donation now to help us provide vital support to people in this difficult time!</p>
-                            <a class="btn align-items-end" type="button" target="_blank" href="https://redcross.org.ua/">Visit</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav m-auto row">
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#A" onClick>A</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#B">B</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#C">C</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#D">D</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#E">E</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#F">F</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#G">G</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#H">H</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#I">I</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#J">J</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#K">K</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#L">L</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#M">M</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#N">N</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#O">O</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#P">P</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#Q">Q</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#R">R</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#S">S</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#T">T</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#U">U</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#V">V</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#W">W</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#X">X</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#Y">Y</a>
+          </li>
+          <li class="nav-item px-2 col-md">
+            <a class="nav-link" href="#Z">Z</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main id="main">
     </main>
-
-    <!-- Modal body -->
-    <div id="modal" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 id="modal_title" class="modal-title"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p id="modal_description"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a type="button" class="btn btn-primary">Visit</a>
-            </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Welcom modal -->
     <div id="welcome" class="modal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Slava Ukraini !</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>This site aims to collect and curate a list of every ukrainian aid organization's website, in order to facilitate they're exposure to the general public.</p>
-                <p>The website is ordered alphabetically, you can use the letter bar to find a specific organization's name.</p>
-                <p>Don't expect this to be a fancy website, it won't be. This is maintained by a single person, curating and adding every organization entry. It's simple, it functional, can be helpful, and that's the beauty of it !</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-            </div>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Slava Ukraini !</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This site aims to collect and curate a list of every ukrainian aid
+              organization's website, in order to facilitate they're exposure to
+              the general public.
+            </p>
+            <p>
+              The website is ordered alphabetically, you can use the letter bar
+              to find a specific organization's name.
+            </p>
+            <p>
+              Don't expect this to be a fancy website, it won't be. This is
+              maintained by a single person, curating and adding every
+              organization entry. It's simple, it functional, can be helpful,
+              and that's the beauty of it !
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
-
-</body>
+  </body>
 </html>
