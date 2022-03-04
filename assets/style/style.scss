@@ -1,5 +1,5 @@
 $blue : #0057b7;
-$yellow: #ffd700;
+$yellow: rgb(255, 215, 0);
 $dark-grey: #666666;
 
 body{
@@ -80,6 +80,12 @@ main {
 
 main b {
     color: #0057b7;
+}
+
+main h1 {
+    color: #0057b7;
+    font-size: 10vh;
+    text-shadow: 5px 5px rgba(255, 215, 0, 0.4);
 }
 
 form#submission {
