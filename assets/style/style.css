@@ -39,13 +39,6 @@ main h5 {
   color: gold !important;
 }
 
-.nav-link.btn {
-  margin: 2%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .btn {
   color: #0057b7 !important;
   background-color: gold;
