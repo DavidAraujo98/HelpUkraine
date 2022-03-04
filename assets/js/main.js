@@ -51,7 +51,6 @@ function loadSection() {
                     var u = heading.c[1].v;
                     var d = heading.c[2].v;
                     var l = heading.c[3].v;
-                    console.log(heading.c[0].v);
                     _cardBuilder(child, n, u, d, l);
                 })   
             }
@@ -77,7 +76,7 @@ function _emptyPage(child, letter) {
 }
 
 function _cardBuilder(sec, name, url, decp, logo) {
-    var div = document.createElement("div");
+    var div = document.createElement("a");
     div.setAttribute("class", "card border-0 shadow")
     div.setAttribute("href", url);
     sec.appendChild(div);
