@@ -12,9 +12,15 @@ function welcome() {
 
 
 function loadSection() {
-
     var letter = window.location.hash.slice(1);
     url = "https://docs.google.com/spreadsheets/d/1XYnKVNYbxarQPCxJTDxOBADRD0vV2v_rFpdU2TwGXyc/gviz/tq?sheet=" + letter;
+
+    if (letter) {
+        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+        collapseElementList.map(function (collapseEl) {
+            return new bootstrap.Collapse(collapseEl)
+        })
+    }
     
     var main = document.getElementById("main");
 
@@ -35,6 +41,10 @@ function loadSection() {
             if (rows.length <= 1) {
                 _emptyPage(child, letter);
             } else {
+                h1 = document.createElement("h1");
+                h1.innerHTML = letter;
+                h1.setAttribute("class", "text-center  text-shadow");
+                child.appendChild(h1);
                 rows.forEach((heading, index) => {
                     if (index < 1) {return;} 
                     var n = heading.c[0].v;
@@ -69,6 +79,7 @@ function _emptyPage(child, letter) {
 function _cardBuilder(sec, name, url, decp, logo) {
     var div = document.createElement("div");
     div.setAttribute("class", "card border-0 shadow")
+    div.setAttribute("href", url);
     sec.appendChild(div);
 
     var div1 = document.createElement("div");

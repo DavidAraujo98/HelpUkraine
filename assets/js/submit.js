@@ -1,4 +1,12 @@
 function sendData() {
+    Swal.fire({
+        icon: 'info',
+        title: "Submitting...",
+        didOpen: () => {
+            Swal.showLoading();
+        },
+    });
+
     const url = "https://script.google.com/macros/s/AKfycbzriW940OQTroyyC4WbunLChdgTCogrf9QEMYAfRdddr2_OVuGjsCiU_wGVdCpRnoiD/exec"
 
     var name = document.getElementById("name").value.toString();
@@ -8,12 +16,11 @@ function sendData() {
     if (!name || !isValidHttpUrl(u) || !desc) {
         Swal.fire({
             icon: 'error',
-            title: "Please fill all fields",
+            title: "Please fill all fields correctly",
             confirmButtonColor: '#0057b7',
         }).then(() => {
             return;
         });
-        _clearInput();
     } else {
         data = {
             name: name,
