@@ -1,2 +1,2 @@
 # HelpUkraine
- Website that collects every known non-profit helping Ukraine
+Website that collects submissions of known non-profit helping Ukraine
